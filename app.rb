@@ -16,3 +16,7 @@ end
 get '/cat' do
   erb(:index)
 end
+
+get '/visitor' do
+  erb "Hi there, Visitor!"
+end
