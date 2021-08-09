@@ -13,10 +13,13 @@ get '/example' do
   'Bye!'
 end
 
-get '/cat' do
+get '/random-cat' do
+  @name = ["Amigo", "Emma", "Almond"].sample
   erb(:index)
 end
 
-get '/visitor' do
-  erb "Hi there, Visitor!"
+get '/named-cat' do
+  p params
+  @name = params[:name]
+  erb(:index)
 end
